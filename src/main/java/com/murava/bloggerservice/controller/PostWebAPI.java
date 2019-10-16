@@ -23,16 +23,15 @@ public class PostWebAPI {
         return post;
     }
 
-    // api/posts/5da30de8af/comments
+    // api/posts/{id}}/comments
     @PostMapping(path = "/{postId}/comments")
     public @ResponseBody
-    Comment addComment(@PathVariable("postId") Long postId, @RequestBody Comment comment) {
-        Account user = new Account();
-        comment.setOwner(user);
-        return postService.addComment(postId, comment);
+    Comment addComment(@PathVariable("postId") Long postId, @RequestBody Comment comment,
+                       @RequestParam(value="author") Long accountId) {
+        return postService.addComment(postId, comment, accountId);
     }
 
-    // api/posts/5da30de8af/comments/17fc5a26
+    // api/posts/{id}/comments/{id}
     @PostMapping(path = "/{postId}/comments/{commentId}")
     public @ResponseBody
     Long assignComment(@PathVariable("postId") Long postId, @PathVariable("commentId") Long commentId) {
@@ -57,8 +56,8 @@ public class PostWebAPI {
 
     @GetMapping(path = "/{postId}/comments")
     public @ResponseBody
-    ResponseEntity<List<Comment>> fetch(@PathVariable("postId") Long postId, @RequestBody Comment comment) {
-        List<Comment> comments = postService.fetch(postId, comment);
+    ResponseEntity<List<Comment>> fetch(@PathVariable("postId") Long postId) {
+        List<Comment> comments = postService.fetch(postId);
         return ResponseEntity.ok(comments);
     }
 

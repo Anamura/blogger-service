@@ -21,6 +21,9 @@ public class PostServiceImpl implements PostService {
     PostDao postDao;
 
     @Autowired
+    AccountDao accountDao;
+
+    @Autowired
     CommentDao commentDao;
 
     @Override
@@ -30,15 +33,19 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<Comment> fetch(Long postId, Comment comment) {
+    public List<Comment> fetch(Long postId) {
         return commentDao.findAll(); //Pageable of
     }
 
     @Override
-    public Comment addComment(Long postId, Comment comment) {
+    public Comment addComment(Long postId, Comment comment, Long accountId) {
         Optional<Post> post = postDao.findById(postId);
         if (post.isPresent()) {
             comment.setPost(post.get());
+        }
+        Optional<Account> account = accountDao.findById(accountId);
+        if (account.isPresent()) {
+            comment.setOwner(account.get());
         }
         comment.setLastModified(new Date());
         return commentDao.save(comment);

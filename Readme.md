@@ -9,6 +9,7 @@
 
 Spring Boot, Lombok, Spring Data, Spring Validation, H2 inMemory db.
 
+Build
 
 mvn clean install -Dmaven.test.skip
 
@@ -17,13 +18,13 @@ java -jar target/blogger-service-1.0.2-SNAPSHOT.jar
 
 Curl
 
--- curl http://localhost:8091/api/accounts/6789/posts create post
+-- curl http://localhost:8091/api/accounts/register create account
 
--- curl http://localhost:8091/api/posts/1/comments add comment
+-- curl http://localhost:8091/api/accounts/1/posts create post
 
--- curl http://localhost:8091/api/posts/all get posts
+-- curl http://localhost:8091/api/posts/2/comments?author=1 add comment
 
--- curl http://localhost:8091/api/accounts/1234/posts get posts of account
+-- curl http://localhost:8091/api/accounts/1/posts get posts of account
 
 -- curl http://localhost:8091/api/comments/all get comments
 
