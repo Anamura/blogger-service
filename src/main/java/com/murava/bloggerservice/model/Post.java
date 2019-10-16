@@ -1,6 +1,5 @@
 package com.murava.bloggerservice.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -23,7 +22,6 @@ public class Post {
     private Account owner;
 
     @OneToMany(mappedBy = "post")
-    @JsonManagedReference
     private List<Comment> comments;
 
     private String slugs;
