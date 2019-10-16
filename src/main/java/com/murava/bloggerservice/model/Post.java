@@ -22,7 +22,7 @@ public class Post {
     private Long id;
 
     @NotBlank
-    @Size(min=2, max=60)
+    @Size(min = 2, max = 60)
     private String name;
 
     @ManyToOne

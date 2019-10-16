@@ -18,7 +18,7 @@ public class Account {
     private Long id;
 
     @NotBlank
-    @Size(min=2, max=40)
+    @Size(min = 2, max = 40)
     private String name;
 
     @OneToMany(mappedBy = "owner")

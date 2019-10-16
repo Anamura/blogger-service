@@ -28,7 +28,7 @@ public class PostWebAPI {
     @PostMapping(path = "/{postId}/comments")
     public @ResponseBody
     Comment addComment(@PathVariable("postId") Long postId, @RequestBody @Valid Comment comment,
-                       @RequestParam(value="author") Long accountId) {
+                       @RequestParam(value = "author") Long accountId) {
         return postService.addComment(postId, comment, accountId);
     }
 

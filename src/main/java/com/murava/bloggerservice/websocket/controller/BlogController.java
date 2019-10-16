@@ -8,25 +8,25 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 
 /**
- * Chat controller that listens to topic and
+ * Controller that listens to topic and
  * responds.
  */
 @Controller
-public class ChatController {
+public class BlogController {
 
     @MessageMapping("/user")
     @SendTo("/topic/user")
     public Response getUser(User user) {
         Response response = new Response();
-        response.setContent("Hello: "+user.getName());
+        response.setContent("Hello: " + user.getName());
         return response;
     }
 
     @MessageMapping("/blog")
     @SendTo("/test/queue")
-    public Response someUser(User user){
+    public Response someUser(User user) {
         Response response = new Response();
-        response.setContent("Hi: "+user.getName());
+        response.setContent("Hi: " + user.getName());
         return response;
     }
 }

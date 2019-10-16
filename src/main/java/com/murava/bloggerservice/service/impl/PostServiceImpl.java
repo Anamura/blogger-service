@@ -53,7 +53,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Long assignToPost(Long id, Long commentId) {
-        return null;
+        throw new UnsupportedOperationException();
     }
 
     @Override
@@ -74,6 +74,6 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getViews() {
-        return null; // TODO
+        throw new UnsupportedOperationException();
     }
 }

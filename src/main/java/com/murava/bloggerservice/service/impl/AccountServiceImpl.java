@@ -67,7 +67,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public void deleteBatch() {
-
+        throw new UnsupportedOperationException();
     }
 
     @Override

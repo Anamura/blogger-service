@@ -2,8 +2,6 @@ package com.murava.bloggerservice.service;
 
 import com.murava.bloggerservice.model.Comment;
 import com.murava.bloggerservice.model.Post;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 

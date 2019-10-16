@@ -18,6 +18,5 @@ public class SwaggerConfig {
                 .apis(RequestHandlerSelectors.basePackage("com.murava.bloggerservice"))
                 .paths(PathSelectors.any())
                 .build();
-                 // https://stackoverflow.com/questions/50333496/using-pageable-with-spring-boot
     }
 }
