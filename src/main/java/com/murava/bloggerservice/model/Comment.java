@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Table(name = "comment")
@@ -26,6 +27,7 @@ public class Comment {
 
     private Date lastModified;
 
+    @NotNull
     private String content;
 
     private int likeCount;
