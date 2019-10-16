@@ -1,4 +1,4 @@
-## Реализация RESTfull бэкенда для сайта "Blogger".
+## Реализация RESTfull бэкенда сервиса "Blogger".
 
 На сайте можно:
 1. Взаимодействовать с аккаунтом. Аккаунт может иметь много постов и комментов.
@@ -16,7 +16,7 @@ Build
     $  java -jar target/blogger-service-1.0.2-SNAPSHOT.jar
 
 
-Curl
+### Curl
 
 -- curl http://localhost:8091/api/accounts/register create account
 
@@ -41,12 +41,12 @@ H2 console
 http://localhost:8091/h2-console
 ![h2console](https://user-images.githubusercontent.com/5726929/66916965-10556980-f025-11e9-9ac4-b0ffa6b238c0.JPG)
 
-Usage
+### Usage
 
 
-      $ curl POST http://localhost:8091/api/accounts/register create account
+      $ curl -H "Accept: application/json" POST http://localhost:8091/api/accounts/register create account
     {
-      "name": "Chris Richardson',
+      "name": "Chris Richardson",
       "email": "chric@pivotal.com",
       "logo": null,
       "social_network": "twitter"
