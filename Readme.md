@@ -49,7 +49,7 @@ http://localhost:8091/h2-console
       "name": "Chris Richardson",
       "email": "chric@pivotal.com",
       "logo": null,
-      "social_network": "twitter"
+      "social_network": "twitter, vk.com"
     }
     
       $ POST http://localhost:8091/api/accounts/1/posts create post
@@ -57,12 +57,12 @@ http://localhost:8091/h2-console
       "name": "Aviation news",
       "slugs": "tech",
       "content": "description",
-      "views": 6
+      "views": 28
     }
     
     $ POST http://localhost:8091/api/posts/1/comments?author=1 add comment
     {
-      "content": "Best nice",
+      "content": "You rock",
       "likeCount": 6
     }
 
