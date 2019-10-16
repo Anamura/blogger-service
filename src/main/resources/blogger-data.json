@@ -1,0 +1,91 @@
+{
+  "posts": [
+    [
+      {
+        "id": 24,
+        "name": "Aviation technology",
+        "owner": {
+          "id": 6789,
+          "name": "Bill Gates",
+          "email": "bgate@microsoft.com",
+          "logo": null,
+          "social_network": "twitter, facebook"
+        },
+        "comments": [
+          {
+            "id": 45,
+            "lastModified": "2019-10-11T21:00:00.000+0000",
+            "content": "Best nice",
+            "owner": {
+              "id": 7624,
+              "name": "John Legend",
+              "email": "jlegtn@music.com",
+              "logo": null,
+              "social_network": "vk.com"
+            },
+            "likeCount": 6
+          }
+        ],
+        "slugs": "Aviation strizhi",
+        "publicationDate": "2019-10-11T21:00:00.000+0000",
+        "content": "Your go to source for aviation news and stories. What Will Happen To El Als Boeing 747.",
+        "views": 6
+      },
+      {
+        "id": 31,
+        "name": "Breakfast recipe",
+        "owner": {
+          "id": 1234,
+          "name": "Chris Richardson",
+          "email": "chric@pivotal.com",
+          "logo": null,
+          "social_network": "instagram"
+        },
+        "comments": [
+          {
+            "id": 87,
+            "lastModified": "2019-09-10T21:00:00.000+0000",
+            "content": "cool yes",
+            "owner": {
+              "id": 2345,
+              "name": "Anna Muraveva",
+              "email": "murava@yandex.ru",
+              "logo": null,
+              "social_network": "facebook"
+            },
+            "likeCount": 4
+          }
+        ],
+        "slugs": "Home cooking",
+        "publicationDate": "2019-10-05T21:00:00.000+0000",
+        "content": "Modern recipe saving techniques and ideas to preserve your own recipes.",
+        "views": 2
+      }
+    ]
+  ],
+  "pageable": {
+    "sort": {
+      "sorted": true,
+      "unsorted": false,
+      "empty": false
+    },
+    "offset": 0,
+    "pageSize": 30,
+    "pageNumber": 0,
+    "unpaged": false,
+    "paged": true
+  },
+  "totalPages": 1,
+  "totalElements": 1,
+  "last": true,
+  "size": 30,
+  "number": 0,
+  "sort": {
+    "sorted": true,
+    "unsorted": false,
+    "empty": false
+  },
+  "numberOfElements": 1,
+  "first": true,
+  "empty": false
+}

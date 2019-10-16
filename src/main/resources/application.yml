@@ -1,0 +1,24 @@
+#logging:
+#  level:
+#    org.springframework.web: ERROR
+#    com.murava.bloggerservice: DEBUG
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#  file: app.log
+
+spring.datasource:
+  url: jdbc:h2:mem:blogger
+  driverClassName: org.h2.Driver
+  username: sa
+  password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+spring.jpa.show-sql: true
+spring.jpa.hibernate.ddl-auto: create-drop
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2-console
+
+debug: true
+
+server:
+  port: 8091
