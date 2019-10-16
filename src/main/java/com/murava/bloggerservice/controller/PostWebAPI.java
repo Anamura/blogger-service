@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -26,7 +27,7 @@ public class PostWebAPI {
     // api/posts/{id}/comments
     @PostMapping(path = "/{postId}/comments")
     public @ResponseBody
-    Comment addComment(@PathVariable("postId") Long postId, @RequestBody Comment comment,
+    Comment addComment(@PathVariable("postId") Long postId, @RequestBody @Valid Comment comment,
                        @RequestParam(value="author") Long accountId) {
         return postService.addComment(postId, comment, accountId);
     }

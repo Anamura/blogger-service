@@ -9,6 +9,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 import static org.springframework.data.domain.Sort.Direction.DESC;
@@ -22,7 +23,7 @@ public class AccountWebAPI {
 
     @PostMapping(path = "/register")
     public @ResponseBody
-    Account createAccount(@RequestBody Account account) {
+    Account createAccount(@RequestBody @Valid Account account) {
         return accountService.registerNewUser(account);
     }
 
@@ -34,7 +35,7 @@ public class AccountWebAPI {
 
     @PostMapping(path = "/{accountId}/posts")
     public @ResponseBody
-    Post addPost(@PathVariable("accountId") Long accountId, @RequestBody Post post) {
+    Post addPost(@PathVariable("accountId") Long accountId, @RequestBody @Valid Post post) {
         return accountService.createPost(accountId, post);
     }
 

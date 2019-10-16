@@ -3,6 +3,9 @@ package com.murava.bloggerservice.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +21,8 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotBlank
+    @Size(min=2, max=60)
     private String name;
 
     @ManyToOne
@@ -31,6 +36,7 @@ public class Post {
 
     private Date publicationDate;
 
+    @NotNull
     private String content;
 
     private int views;
