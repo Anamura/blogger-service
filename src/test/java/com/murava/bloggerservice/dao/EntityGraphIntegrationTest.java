@@ -17,9 +17,7 @@ import java.io.IOException;
 
 import static org.junit.Assert.assertEquals;
 
-//@DataJpaTest
 @SpringBootTest
-//@Sql(scripts = "/entitygraph_data.sql")
 public class EntityGraphIntegrationTest {
     @Autowired
     private PostDao postDao;
@@ -30,9 +28,6 @@ public class EntityGraphIntegrationTest {
 
     @Test
     public void givenEntityGraph_whenCalled_shouldRetrunDefinedFields() throws ResourceNotFoundException {
-
-        // Page<Post> post = postDao.findAllByAccount(null, null);
-        // assertEquals(post.getTotalElements(), null);
     }
 
     @After

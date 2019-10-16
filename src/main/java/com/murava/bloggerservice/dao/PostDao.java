@@ -14,7 +14,7 @@ import java.util.List;
  * Because we can have thousands of users we need to
  * Fetch comments in a single ds query and use Pageable.
  * <p>
- * see @EntityGraphIntegrationTest output.log
+ * see @EntityGraph output.log
  */
 public interface PostDao extends JpaRepository<Post, Long> {
     @EntityGraph(attributePaths = {"comments"})
@@ -23,9 +23,8 @@ public interface PostDao extends JpaRepository<Post, Long> {
 
 
     /**
-     * We can use @NamedQuery to load columns more detail
-     * only post name and their comments.
+     * We can use @NamedEntityGraph directly annotation on Post entity.
      */
-    @EntityGraph(attributePaths = {"comments"})
+    @EntityGraph(value = "Post.comments")
     List<Post> findAll();
 }

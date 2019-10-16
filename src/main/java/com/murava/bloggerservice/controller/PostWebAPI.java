@@ -23,7 +23,7 @@ public class PostWebAPI {
         return post;
     }
 
-    // api/posts/{id}}/comments
+    // api/posts/{id}/comments
     @PostMapping(path = "/{postId}/comments")
     public @ResponseBody
     Comment addComment(@PathVariable("postId") Long postId, @RequestBody Comment comment,

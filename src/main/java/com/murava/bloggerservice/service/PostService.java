@@ -27,10 +27,4 @@ public interface PostService {
     List<Post> list();
 
     List<Post> getViews();
-
-    // Post create(Long userId, Post post);
-    //
-    // Page<Post> findAllPageable(Long userId, int page, int size, boolean sort);
-    //
-    // void deleteAllPostsByUser(Long userId);
 }

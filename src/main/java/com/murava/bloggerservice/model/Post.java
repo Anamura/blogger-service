@@ -9,6 +9,9 @@ import java.util.List;
 @Table(name = "post")
 @Entity
 @Data
+@NamedEntityGraph(name = "Post.comments",
+        attributeNodes = @NamedAttributeNode("comments")
+)
 public class Post {
 
     @Id
@@ -18,7 +21,7 @@ public class Post {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "account_id", nullable=false)
+    @JoinColumn(name = "account_id", nullable = false)
     private Account owner;
 
     @OneToMany(mappedBy = "post")

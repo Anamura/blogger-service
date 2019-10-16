@@ -41,3 +41,29 @@ H2 console
 http://localhost:8091/h2-console
 ![h2console](https://user-images.githubusercontent.com/5726929/66916965-10556980-f025-11e9-9ac4-b0ffa6b238c0.JPG)
 
+
+
+POST http://localhost:8091/api/accounts/register create account
+ {"name": "Chris Richardson',
+  "email": "chric@pivotal.com",
+  "logo": null,
+  "social_network": "twitter"}
+
+
+POST http://localhost:8091/api/accounts/1/posts create post
+ {"name": "Aviation news",
+ "slugs": "tech",
+ "content": "description",
+ "views": 6}
+
+POST http://localhost:8091/api/posts/1/comments?author=1 add comment
+ {"content": "Best nice",
+  "likeCount": 6 }
+
+GET http://localhost:8091/api/accounts/1/posts get posts of account
+
+GET http://localhost:8091/api/posts/all
+
+curl http://localhost:8091/api/comments/all get comments
+
+
