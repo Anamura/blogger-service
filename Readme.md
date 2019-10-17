@@ -22,7 +22,7 @@ Build
 
 -- curl http://localhost:8091/api/accounts/1/posts create post
 
--- curl http://localhost:8091/api/posts/2/comments?author=1 add comment
+-- curl http://localhost:8091/api/posts/1/comments?author=1 add comment
 
 -- curl http://localhost:8091/api/accounts/1/posts get posts of account
 
